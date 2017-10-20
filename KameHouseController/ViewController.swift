@@ -7,11 +7,41 @@
 //
 
 import UIKit
+// MARK: Local Constants
+var lampStatus: Bool = false
+var lightStatus: Bool = false
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var LightButton: UIButton!
+    @IBOutlet weak var LampButton: UIButton!
+    @IBAction func LampButtonAction(_ sender: UIButton ) {
+        if(lampStatus){
+            sender.setTitle("On", for: .normal)
+            lampStatus = false
+        }else{
+            sender.setTitle("Off", for: .normal)
+            lampStatus = true
+        }
+    }
+    
+    @IBAction func LightButtonSwitch(_ sender: UIButton) {
+        if(lightStatus){
+            LightButton.setTitle("On", for: .normal)
+            lightStatus = false
+        }else{
+            LightButton.setTitle("Off", for: .normal)
+            lightStatus = true
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.LampButton.setTitle("Off", for: .normal)
+        print("ffaaaaaaaf")
+        print(LampButton)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,32 +50,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var LightSwitch: UISegmentedControl!
-    @IBAction func LightSwitchAction(_ sender: Any) {
-        switch LightSwitch.selectedSegmentIndex
-        {
-        case 0:
-            print("light on")
-        case 1:
-            print("light off")
-        default:
-            break
-        }
-        
-    }
-    
-    @IBOutlet weak var LampSwitch: UISegmentedControl!
-    @IBAction func LampSwitchAction(_ sender: Any) {
-        switch LampSwitch.selectedSegmentIndex
-        {
-        case 0:
-            print("lamp on")
-        case 1:
-            print("lamp off")
-        default:
-            break
-        }
-    }
     
 
 }

@@ -21,44 +21,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7F-I7-c3q">
-                                <rect key="frame" x="202" y="388" width="338" height="222"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-7E-g3U">
+                                <rect key="frame" x="267" y="783" width="195" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFw-DI-mU8">
-                                <rect key="frame" x="800" y="388" width="320" height="222"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-nN-U3u">
+                                <rect key="frame" x="267" y="783" width="195" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgE-eb-D7T">
-                                <rect key="frame" x="783" y="678" width="340" height="70"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afk-2O-jHz">
+                                <rect key="frame" x="267" y="783" width="195" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
-                                <segments>
-                                    <segment title="On"/>
-                                    <segment title="Off"/>
-                                </segments>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title=" Off"/>
                                 <connections>
-                                    <action selector="LampSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="0YY-8z-5W3"/>
+                                    <action selector="LampButtonAction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="TnG-NY-Z4g"/>
                                 </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-Ih-LUY">
-                                <rect key="frame" x="194" y="678" width="340" height="70"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBV-pS-1tq">
+                                <rect key="frame" x="699" y="783" width="195" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
-                                <segments>
-                                    <segment title="On"/>
-                                    <segment title="Off"/>
-                                </segments>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Off"/>
                                 <connections>
-                                    <action selector="LightSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="CBu-Do-5sm"/>
+                                    <action selector="LightButtonSwitch:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7TA-cM-Vfg"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="LampSwitch" destination="rgE-eb-D7T" id="TXj-dz-nBC"/>
-                        <outlet property="LightSwitch" destination="8Ph-Ih-LUY" id="FWh-fE-Dek"/>
+                        <outlet property="LampButton" destination="HD5-nN-U3u" id="6F8-2T-zyY"/>
+                        <outlet property="LightButton" destination="GBV-pS-1tq" id="NPF-gi-oEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
